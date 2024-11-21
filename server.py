@@ -15,6 +15,7 @@ CORS(app)
 def home():
     user_message = request.json['message']
     ans = llm_rag(user_message)
+    print(ans)
     return jsonify({'message': ans})
 
 
