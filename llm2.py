@@ -33,6 +33,7 @@ def llm_rag2(user_input):
 아래 형식을 반드시 준수하고, 분석적인 어조로 작성하며, 이모티콘을 추가하여 6줄 이내로 설명해 주세요.
 
 **출력 형식**
+
 Address: ECBS from Seoul, South Korea
 Date: [2024-11]
 
@@ -44,6 +45,7 @@ Description----------------
  [추가적인 특징 1] 🌱 
  [추가적인 특징 2] 📈
 
+ 
 **주의사항:**
 
 **Description 섹션:**
@@ -55,6 +57,7 @@ Description----------------
    - 대괄호([])는 실제 내용으로 작성.
    - 본문은 120token이하로 작성하려 노력할 것
    - 마지막 문장은 "당신을 위한 추천 기사를 스크롤을 내려서 확인해 보세요!"로 고정할 것.
+   - '*'는 출력내용에서 제외
 
 
     # Question:
@@ -65,7 +68,7 @@ Description----------------
     prompt = PromptTemplate.from_template(text)
 
     # 7. LLM
-    llm2 = ChatOpenAI(model="chatgpt-4o-latest", temperature=0.2, max_tokens=200)
+    llm2 = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, max_tokens=200)
     
 
     parser = StrOutputParser()
