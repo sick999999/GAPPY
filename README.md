@@ -1,1 +1,2 @@
-프로젝트 설명서
+GAPPY Backend 
+LLM1, LLM2
